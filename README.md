@@ -4,8 +4,8 @@ Application Details: It is an example of UI design, passing data between view co
 
 Sample application demonstarting below iOS concepts
 
-1.Create UI using storyboard and SwiftUI components
-2.Create custom button
-3.IBDesignable concept
-4.Navigation between view controllers using segues/navigation controller
+1. Create UI using storyboard and SwiftUI components
+2. Create custom button
+3. IBDesignable concept
+4. Navigation between view controllers using segues/navigation controller 
 5. Passing data between view controllers
