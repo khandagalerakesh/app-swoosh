@@ -2,7 +2,7 @@
 
 Application Details: It is an example of UI design, passing data between view controllers and navigation using storbyboard, segue, navigation controller concepts.
 
-Sample application demonstarting below iOS concepts
+Sample application is created in Objective-C, Swift and SwiftUI demonstarting below concepts
 
 1. Create UI using storyboard and SwiftUI components
 2. Create custom button
