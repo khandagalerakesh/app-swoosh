@@ -11,7 +11,7 @@ import SwiftUI
 struct swiftui_app_swooshApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeScreen()
         }
     }
 }

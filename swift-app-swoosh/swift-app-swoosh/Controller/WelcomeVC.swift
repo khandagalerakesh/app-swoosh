@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WelcomeVC.swift
 //  swift-app-swoosh
 //
 //  Created by Rakesh Khandagale on 2/19/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
