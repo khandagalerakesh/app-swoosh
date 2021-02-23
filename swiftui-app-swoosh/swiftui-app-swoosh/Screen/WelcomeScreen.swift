@@ -9,44 +9,46 @@ import SwiftUI
 
 struct WelcomeScreen: View {
     var body: some View {
-        ZStack {
-            BackgroundImageView(imageName: "welcomeScreenBG")
-            
+        NavigationView {
             VStack {
-                LogoImageView()
+                CustomImageView(imageName: "swooshLogo",
+                                aspectRatio: .fit,
+                                width: 100,
+                                height: 50,
+                                alignment: .center)
+                    .padding(.top, 44)
                 
-                Spacer(minLength: 0)
-                
-                VStack(alignment: .center, spacing: 15) {
-                    VStack(alignment: .center) {
-                        Text("GO ALL IN")
-                            .font(.system(size: 52, weight: .medium))
-                            .foregroundColor(Color.white)
-                            .multilineTextAlignment(.center)
-                        
-                        Text("ON GOING ALL OUT")
-                            .font(.system(size: 26, weight: .heavy))
-                            .foregroundColor(Color.white)
-                            .multilineTextAlignment(.center)
-                    }
+                VStack(alignment: .center, spacing: 8) {
                     
-                    Text("Find a team in your city & dominate the league")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.center)
+                    CustomTextView(value: "GO ALL IN", fontSize: 52, fontWeight: .semibold)
+                    
+                    CustomTextView(value: "ON GOING ALL OUT", fontSize: 26, fontWeight: .medium)
+                    
+                    CustomTextView(value: "Find a team in your city & dominate the league", fontSize: 16, fontWeight: .light)
                         .lineLimit(2)
+                        .padding([.leading, .trailing], 35)
+                        .padding()
                 }
+                .padding(.top, 60)
                 
                 Spacer(minLength: 0)
                 
-                Button(action: {
-                    print("Get Started button pressed")
-                }, label: {
-                    BorderedButtonView(title: "GET STARTED")
-                })
-                .padding([.leading, .trailing], 40)
-                .padding([.bottom, .top])
+                NavigationLink(
+                    destination: Text("Destination"),
+                    label: {
+                        BorderedButtonView(value: "GET STARTED", fontSize: 24, fontWeight: .bold, width: 300)
+                            .padding(.bottom, 20)
+                            .padding()
+                    })
             }
+            .background(CustomImageView(imageName: "welcomeScreenBG",
+                                        aspectRatio: .fill,
+                                        width: UIScreen.main.bounds.width,
+                                        height: UIScreen.main.bounds.height,
+                                        alignment: .center))
+            .edgesIgnoringSafeArea(.all)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
     }
 }
